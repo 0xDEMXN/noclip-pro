@@ -13,9 +13,10 @@
 - Customizable languages
 - Customizable keybindings
 - Camera modes
-- Vehicles transparency
+- Ped transparency inside vehicles
 - Frozen position toggle
 - Permissions management (steam id and groups)
+- Auto-hide HUD after some seconds
 
 ## Download & Installation
 

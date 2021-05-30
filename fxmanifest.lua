@@ -2,8 +2,8 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'D3RP'
-description 'Admin Resource'
-version '1.0.0'
+description 'No Clip Pro - Enhanced NoClip for FiveM'
+version '1.0.2'
 
 client_scripts {
   'locale.lua',
@@ -15,8 +15,6 @@ client_scripts {
 server_scripts {
   '@mysql-async/lib/MySQL.lua',
 
-  'locale.lua',
-  'locales/en.lua',
   'config.lua',
   'server/sv_noclip.lua',
 }

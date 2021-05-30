@@ -32,9 +32,9 @@ Config = {
 
     EnableHUD = true,
 
-    FrozenPosition = false, -- Toggle "frozen" position while noclip is active
+    FrozenPosition = false, -- Toggle "frozen" position while noclip is active, enabling his also disables spawning already noclipped vehicles
 
-    DisableWeaponWheel = false, -- Disable weapon wheel while noclip is active
+    DisableWeapons = true, -- Disable weapon wheel and takes weapons away while noclip is active
 
     -- Permissions management (adding a group or a steam id requires a resource restart [or just wait a regular server restart :-)])
 
