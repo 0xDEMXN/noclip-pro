@@ -5,10 +5,10 @@ local timer
 Citizen.CreateThread(function()
     while true do 
         if IsControlJustPressed(1, Config.Controls.openKey) then
-            timer = 5000
-            if NoclipActive then
+            if NoClipActive then
                 TriggerEvent('admin:toggleNoClip')
             else
+                timer = 5000
                 TriggerServerEvent('admin:noClip')
             end
         end
