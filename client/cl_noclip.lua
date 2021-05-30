@@ -32,7 +32,7 @@ Citizen.CreateThread(function()
         while NoClipActive do
             if not IsHudHidden() and Config.EnableHUD and timer > 0 then
                 timer = timer - 10
-                RenderScale(scaleform, index)          
+                RenderScale(scaleform, index, FollowCamMode)          
             end
 
             if IsPedInAnyVehicle(PlayerPedId(), false) then
@@ -182,7 +182,7 @@ function DisableControls()
     DisableControlAction(0, 269, true)
 end
 
-function RenderScale(scaleform, index)
+function RenderScale(scaleform, index, cam)
     BeginScaleformMovieMethod(scaleform, "CLEAR_ALL")
     EndScaleformMovieMethod()
     
@@ -198,7 +198,7 @@ function RenderScale(scaleform, index)
     PushScaleformMovieMethodParameterString(_U("noclip_camera"))
     EndScaleformMovieMethod()
 
-    if not FollowCamMode then
+    if not cam then
         BeginScaleformMovieMethod(scaleform, "SET_DATA_SLOT")
         ScaleformMovieMethodAddParamInt(4)
         PushScaleformMovieMethodParameterString(GetControlInstructionalButton(1, Config.Controls.turnRight, true))
