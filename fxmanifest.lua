@@ -13,8 +13,6 @@ client_scripts {
 }
 
 server_scripts {
-  '@mysql-async/lib/MySQL.lua',
-
   'config.lua',
   'server/sv_noclip.lua',
 }
@@ -22,5 +20,5 @@ server_scripts {
 file 'locale.js'
 
 dependencies {
-	'mysql-async'
+	'es_extended'
 }

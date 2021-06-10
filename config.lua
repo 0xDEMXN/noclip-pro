@@ -42,6 +42,7 @@ Config = {
     -- so you still need to wait a bit for autosave to do its job or save the player manually in case you need this immediately
 
     AllowedGroups = {
+        'superadmin',
         'admin',
         'helper',
     },
