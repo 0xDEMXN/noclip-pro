@@ -30,7 +30,9 @@ Config = {
         h = 3, -- Rotation movement speed multiplier
     },
 
-    EnableHUD = true,
+    ESX = true, -- enable ESX Legacy compatibility (ESX Legacy required)
+
+    EnableHUD = true, -- disable to gain slightly better performance
 
     FrozenPosition = false, -- Toggle "frozen" position while noclip is active, enabling his also disables spawning already noclipped vehicles
 

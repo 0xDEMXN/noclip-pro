@@ -1,3 +1,8 @@
+if Config.ESX then
+    ESX = nil
+    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+end
+
 RegisterNetEvent('admin:noClip')
 AddEventHandler('admin:noClip', function(player)
     local source = source
@@ -40,17 +45,22 @@ function GetSteamID(src)
 end
 
 function GetPlayerGroup(src)
-	local license = GetPlayerIdentifiers(src)[2] or false
+    if Config.ESX then
+        local xPlayer = ESX.GetPlayerFromId(src)
+        return xPlayer.getGroup() or false
+    else 
+        local license = GetPlayerIdentifiers(src)[2] or false
 
-	if (license == false or license:sub(1,7) ~= "license") then
-		return false
-	end
+        if (license == false or license:sub(1,7) ~= "license") then
+            return false
+        end
 
-    license = string.sub(license, 9)
+        license = string.sub(license, 9)
 
-    local player = MySQL.Sync.fetchAll('SELECT `group` FROM users WHERE identifier = @identifier', {
-        ['@identifier'] = license
-    })
+        local player = MySQL.Sync.fetchAll('SELECT `group` FROM users WHERE identifier = @identifier', {
+            ['@identifier'] = license
+        })
 
-    return player[1].group or false
+        return player[1].group or false
+    end
 end
