@@ -6,8 +6,11 @@ end
 RegisterNetEvent('admin:noClip')
 AddEventHandler('admin:noClip', function(player)
     local source = source
+    if Config.ESX then
+        local xPlayer = ESX.GetPlayerFromId(source)
+        local playerGroup = xPlayer.getGroup()
+    end
     local steamID = GetSteamID(source)
-    local playerGroup = GetPlayerGroup(source)
     local authorized = false
 
     if Config.AllowedGroups then
@@ -42,25 +45,4 @@ function GetSteamID(src)
 	end
 
 	return sid
-end
-
-function GetPlayerGroup(src)
-    if Config.ESX then
-        local xPlayer = ESX.GetPlayerFromId(src)
-        return xPlayer.getGroup() or false
-    else 
-        local license = GetPlayerIdentifiers(src)[2] or false
-
-        if (license == false or license:sub(1,7) ~= "license") then
-            return false
-        end
-
-        license = string.sub(license, 9)
-
-        local player = MySQL.Sync.fetchAll('SELECT `group` FROM users WHERE identifier = @identifier', {
-            ['@identifier'] = license
-        })
-
-        return player[1].group or false
-    end
 end

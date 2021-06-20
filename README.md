@@ -2,9 +2,9 @@
 
 ### Standalone NoClip for FiveM inspired by vMenu
 
-## Requirements
+## Optional Requirements
 
-- [mysql-async](https://github.com/brouznouf/fivem-mysql-async)
+- [es_extended](https://github.com/esx-framework/es_extended/)
 
 ## Features
 

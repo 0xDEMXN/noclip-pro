@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'D3RP'
 description 'No Clip Pro - Enhanced NoClip for FiveM'
-version '1.0.2'
+version '1.0.4'
 
 client_scripts {
   'locale.lua',
@@ -13,14 +13,8 @@ client_scripts {
 }
 
 server_scripts {
-  '@mysql-async/lib/MySQL.lua',
-
   'config.lua',
   'server/sv_noclip.lua',
 }
 
 file 'locale.js'
-
-dependencies {
-	'mysql-async'
-}
