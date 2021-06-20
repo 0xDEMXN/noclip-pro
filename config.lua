@@ -30,7 +30,7 @@ Config = {
         h = 3, -- Rotation movement speed multiplier
     },
 
-    ESX = true, -- enable ESX Legacy compatibility (ESX Legacy required)
+    ESX = false, -- enable ESX Legacy compatibility (ESX Legacy required)
 
     EnableHUD = true, -- disable to gain slightly better performance
 
