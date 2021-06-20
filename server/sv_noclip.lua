@@ -6,9 +6,10 @@ end
 RegisterNetEvent('admin:noClip')
 AddEventHandler('admin:noClip', function(player)
     local source = source
+    local playerGroup
     if Config.ESX then
         local xPlayer = ESX.GetPlayerFromId(source)
-        local playerGroup = xPlayer.getGroup()
+        playerGroup = xPlayer.getGroup()
     end
     local steamID = GetSteamID(source)
     local authorized = false
