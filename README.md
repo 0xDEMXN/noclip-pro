@@ -1,22 +1,18 @@
 # noclip-pro - Enhanced NoClip for FiveM
 
-### Standalone NoClip for FiveM inspired by vMenu
+### Standalone NoClip for FiveM
 
 ## Optional Requirements
 
-- [es_extended](https://github.com/esx-framework/es_extended/)
+- [es_extended](https://github.com/esx-framework/es_extended/tree/legacy) (Legacy)
 
 ## Features
 
-- NoClip UI inspired by vMenu (thanks to [Tom Grobbe](https://github.com/TomGrobbe "Tom Grobbe GitHub page"))
 - Customizable speeds
-- Customizable languages
 - Customizable keybindings
 - Camera modes
 - Ped transparency inside vehicles
-- Frozen position toggle
 - Permissions management (steam id and groups)
-- Auto-hide HUD after some seconds
 
 ## Download & Installation
 
@@ -25,17 +21,17 @@
 
 ```
 cd resources
-git clone https://github.com/derp-jsx/noclip-pro.git
+git clone https://github.com/d3rp-jsx/noclip-pro.git
 ```
 
 ### Manually
 
 - Go to the [releases page](https://github.com/derp-jsx/noclip-pro/releases "Releases page") and download the latest release
-- Put it in the `resource` directory
+- Place it in the `resource` directory
 
 ### Installation
 
-- Configure `config.lua` and `locales` to fit your needs
+- Edit `config.lua` to fit your needs
 - Add the resource to your `server.cfg` to make sure it's started at server startup:
 
 ```

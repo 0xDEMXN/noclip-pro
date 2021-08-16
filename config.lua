@@ -3,9 +3,9 @@ Config = {
 
     Controls = {
         -- FiveM IO Parameter ID: https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
-        toggle = 'DELETE', -- CANC
-        changeSpeed = 'LSHIFT', -- L-Shift
-        camMode = 'H', -- H
+        toggle = 'DELETE',
+        changeSpeed = 'LSHIFT', 
+        camMode = 'H', 
         -- FiveM Controls: https://docs.fivem.net/game-references/controls/
         goUp = 85, -- Q
         goDown = 48, -- Z
