@@ -2,26 +2,27 @@ Config = {
     Locale = 'en',
 
     Controls = {
+        -- FiveM IO Parameter ID: https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+        toggle = 'DELETE', -- CANC
+        changeSpeed = 'LSHIFT', -- L-Shift
+        camMode = 'H', -- H
         -- FiveM Controls: https://docs.fivem.net/game-references/controls/
-        openKey = 214, -- CANC
         goUp = 85, -- Q
         goDown = 48, -- Z
         turnLeft = 34, -- A
         turnRight = 35, -- D
         goForward = 32,  -- W
         goBackward = 33, -- S
-        changeSpeed = 21, -- L-Shift
-        camMode = 74, -- H
     },
 
     Speeds = {
         -- You can add or edit existing speeds with relative label
-        { label = 'Very Slow', speed = 0},
-        { label = 'Slow', speed = 0.5},
-        { label = 'Normal', speed = 2},
-        { label = 'Fast', speed = 5},
-        { label = 'Very Fast', speed = 10},
-        { label = 'Max', speed = 15},
+        { speed = 0 },
+        { speed = 0.5 },
+        { speed = 2 },
+        { speed = 5 },
+        { speed = 10 },
+        { speed = 15 },
     },
 
     Offsets = {
@@ -31,12 +32,6 @@ Config = {
     },
 
     ESX = false, -- enable ESX Legacy compatibility (ESX Legacy required)
-
-    EnableHUD = true, -- disable to gain slightly better performance
-
-    FrozenPosition = false, -- Toggle "frozen" position while noclip is active, enabling his also disables spawning already noclipped vehicles
-
-    DisableWeapons = true, -- Disable weapon wheel and takes weapons away while noclip is active
 
     -- Permissions management (adding a group or a steam id requires a resource restart [or just wait a regular server restart :-)])
 

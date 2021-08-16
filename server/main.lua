@@ -4,9 +4,8 @@ if Config.ESX then
 end
 
 RegisterNetEvent('admin:noClip')
-AddEventHandler('admin:noClip', function(player)
-    local source = source
-    local playerGroup
+AddEventHandler('admin:noClip', function()
+    local playerGroup = false
     if Config.ESX then
         local xPlayer = ESX.GetPlayerFromId(source)
         playerGroup = xPlayer.getGroup()
@@ -16,7 +15,7 @@ AddEventHandler('admin:noClip', function(player)
 
     if Config.AllowedGroups then
         if playerGroup then
-            for k,v in ipairs(Config.AllowedGroups) do
+            for _,v in ipairs(Config.AllowedGroups) do
                 if v == playerGroup then
                     TriggerClientEvent('admin:toggleNoClip', source)
                     authorized = true
@@ -28,7 +27,7 @@ AddEventHandler('admin:noClip', function(player)
     if not authorized then
         if Config.AllowedSteamIDs then
             if steamID then 
-                for k,v in ipairs(Config.AllowedSteamIDs) do
+                for _,v in ipairs(Config.AllowedSteamIDs) do
                     if v == steamID then
                         TriggerClientEvent('admin:toggleNoClip', source)
                     end
@@ -38,12 +37,14 @@ AddEventHandler('admin:noClip', function(player)
     end
 end)
 
-function GetSteamID(src)
-    local sid = GetPlayerIdentifiers(src)[1] or false
+function GetSteamID(source)
+    local sid = false
 
-	if (sid == false or sid:sub(1,5) ~= "steam") then
-		return false
-	end
+    for _,v in pairs(GetPlayerIdentifiers(source))do
+        if string.sub(v, 1, string.len("steam:")) == "steam:" then
+            sid = v
+        end
+    end
 
 	return sid
 end

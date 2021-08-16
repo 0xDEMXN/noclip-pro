@@ -1,20 +1,16 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'D3RP'
+author 'd3rp-jsx'
 description 'No Clip Pro - Enhanced NoClip for FiveM'
-version '1.0.4'
+version '1.1.0'
+
+shared_script 'config.lua'
 
 client_scripts {
-  'locale.lua',
-  'locales/en.lua',
-  'config.lua',
-  'client/cl_noclip.lua',
+  'client/main.lua',
 }
 
 server_scripts {
-  'config.lua',
-  'server/sv_noclip.lua',
+  'server/main.lua',
 }
-
-file 'locale.js'
