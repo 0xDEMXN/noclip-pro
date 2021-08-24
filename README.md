@@ -26,7 +26,7 @@ git clone https://github.com/d3rp-jsx/noclip-pro.git
 
 ### Manually
 
-- Go to the [releases page](https://github.com/derp-jsx/noclip-pro/releases "Releases page") and download the latest release
+- Go to the [releases page](https://github.com/d3rp-jsx/noclip-pro/releases "Releases page") and download the latest release
 - Place it in the `resource` directory
 
 ### Installation
@@ -50,7 +50,7 @@ ensure noclip-pro
 
 noclip-pro - Enhanced NoClip for FiveM
 
-Copyright (C) 2021 Demetrio Montalto
+Copyright (C) 2021 d3rp-jsx
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 
