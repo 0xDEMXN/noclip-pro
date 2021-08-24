@@ -27,7 +27,7 @@ git clone https://github.com/d3rp-jsx/noclip-pro.git
 ### Manually
 
 - Go to the [releases page](https://github.com/d3rp-jsx/noclip-pro/releases "Releases page") and download the latest release
-- Place it in the `resource` directory
+- Place it inside the `resources` directory
 
 ### Installation
 
